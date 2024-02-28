@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView, Button} from 'react-native';
 import cocacola from '../assets/coke1.jpg';
 import {ImageBackground} from 'react-native';
 const cocacola2 = require('../assets/coke2.jpg'); //?------We can use the require function to hold our image
@@ -30,6 +30,11 @@ const FirstPage = () => {
           quam quos accusamus laborum. Officiis repellat autem ipsum eos minima.
         </Text>
         <Image source={cocacola2} style={{height: 300, width: 300}} />
+        <Button
+          title="Press It"
+          color="midnightblue"
+          onPress={() => console.log('Button Pressed')}
+        />
       </ScrollView>
     </View>
   );
