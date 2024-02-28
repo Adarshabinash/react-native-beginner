@@ -1,10 +1,20 @@
-import React from 'react';
-import {View, Text, Image, ScrollView, Button, Pressable} from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  Button,
+  Pressable,
+  Modal,
+} from 'react-native';
 import cocacola from '../assets/coke1.jpg';
 import {ImageBackground} from 'react-native';
 const cocacola2 = require('../assets/coke2.jpg'); //?------We can use the require function to hold our image
 
 const FirstPage = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={{backgroundColor: 'plum', flex: 1, padding: 20}}>
       <ScrollView>
@@ -40,9 +50,17 @@ const FirstPage = () => {
         <Button
           title="Press It"
           color="midnightblue"
-          onPress={() => console.log('Button Pressed')}
+          onPress={() => setModalVisible(true)}
         />
       </ScrollView>
+      <Modal
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}
+        animationType="slide">
+        <View style={{backgroundColor: 'lightblue', padding: 20, flex: 1}}>
+          <Button title="Close" onPress={() => setModalVisible(false)} />
+        </View>
+      </Modal>
     </View>
   );
 };
