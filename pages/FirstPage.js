@@ -1,26 +1,36 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import cocacola from '../assets/coke1.jpg';
 import {ImageBackground} from 'react-native';
 const cocacola2 = require('../assets/coke2.jpg'); //?------We can use the require function to hold our image
 
 const FirstPage = () => {
   return (
-    <View style={{backgroundColor: 'plum', flex: 1}}>
-      <Text>This is a text</Text>
-      {/* <Image source={cocacola} style={{height: '30%', width: '60%'}} />
-      <Image source={cocacola2} style={{height: '30%', width: '60%'}} />
-      <Image
-        source={{
-          uri: 'https://fastly.picsum.photos/id/855/200/200.jpg?hmac=l4U_O6zoVhjz9BqOito1u4k30FNJz3hLVYjvrdE59MU',
-        }}
-        style={{height: 200, width: 200}}
-      /> */}
-      <ImageBackground
-        source={cocacola}
-        style={{flex: 1, height: '80%', width: '96%', left: 4}}>
-        <Text style={{color: 'white'}}>THIS IS A SAMPLE TEXT</Text>
-      </ImageBackground>
+    <View style={{backgroundColor: 'plum', flex: 1, padding: 20}}>
+      <ScrollView>
+        <Image source={cocacola} style={{height: 300, width: 300}} />
+        <Text>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          exercitationem a, non facilis soluta suscipit. Nesciunt aliquam
+          incidunt est, quos, dolor quidem quod tenetur velit beatae, minima
+          iure? Eveniet veritatis culpa recusandae fuga maiores necessitatibus
+          iste illum quaerat suscipit temporibus, enim, aut quia accusantium ex!
+          Suscipit tempore molestias nemo illo voluptas alias in sint
+          necessitatibus. Ipsam debitis culpa magnam reiciendis? Possimus
+          quaerat officiis sunt consequatur optio iure porro minima.
+          Exercitationem quod explicabo impedit eum quis harum delectus
+          inventore perspiciatis dolores ut quos dicta ab cumque suscipit rerum
+          odit nisi non totam animi, iusto veniam magni temporibus similique.
+          Quasi dolorem illum doloribus sit sequi accusantium ipsum voluptatum
+          qui debitis earum aliquid et, consequatur, eos cupiditate vitae cum
+          recusandae quis reprehenderit fuga unde molestias assumenda nostrum?
+          Temporibus necessitatibus nostrum illum id, mollitia exercitationem
+          sequi veniam laborum ipsa, nobis quam fugit repudiandae rerum maxime
+          aperiam quis ipsam consequuntur alias dolorum? Similique quasi facilis
+          quam quos accusamus laborum. Officiis repellat autem ipsum eos minima.
+        </Text>
+        <Image source={cocacola2} style={{height: 300, width: 300}} />
+      </ScrollView>
     </View>
   );
 };
