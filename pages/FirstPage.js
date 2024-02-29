@@ -1,13 +1,33 @@
 import React, {useState} from 'react';
-import {View, ActivityIndicator} from 'react-native';
+import {View, Alert, Button} from 'react-native';
 
 const FirstPage = () => {
   return (
     <View style={{backgroundColor: 'plum', flex: 1, padding: 20}}>
-      <ActivityIndicator />
-      <ActivityIndicator size={'large'} />
-      <ActivityIndicator size={80} color="blue" />
-      <ActivityIndicator size={80} color="blue" animating={false} />
+      <Button title="Alert" onPress={() => Alert.alert('Invalid data')} />
+      <Button
+        title="Alert 2"
+        onPress={() => Alert.alert('Invalid data', 'The data is incorrect !')}
+      />
+      <Button
+        title="Alert 3"
+        onPress={() =>
+          Alert.alert('Invalid data', 'The data is incorrect !', [
+            {
+              text: 'Cancel',
+              onPress: () => {
+                console.log('Cancel Pressed');
+              },
+            },
+            {
+              text: 'okay',
+              onPress: () => {
+                console.log('Okay Pressed');
+              },
+            },
+          ])
+        }
+      />
     </View>
   );
 };
