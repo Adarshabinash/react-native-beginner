@@ -1,10 +1,21 @@
 import React from 'react';
-import {View, Button, Text} from 'react-native';
+import {View, Button, Text, StyleSheet} from 'react-native';
 
-export default Greet = ({name}) => {
+export default Greet = () => {
   return (
-    <View style={{backgroundColor: 'coral', flex: 1, padding: 60}}>
-      <Text> Hello {name}</Text>
+    <View style={styles.container}>
+      <Text style={styles.parentText}>Stylesheet API</Text>
     </View>
   );
 };
+
+export const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'lightblue',
+    flex: 1,
+    padding: '20%',
+  },
+  parentText: {
+    fontSize: 29,
+  },
+});
