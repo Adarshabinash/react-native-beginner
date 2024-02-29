@@ -1,11 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
-import FirstPage from './pages/FirstPage';
+import Greet from './pages/Greet';
 
 export default App = () => {
   return (
     <>
-      <FirstPage />
+      <Greet name={'Adarsh'} />
     </>
   );
 };
