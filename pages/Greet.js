@@ -4,18 +4,32 @@ import {View, Button, Text, StyleSheet} from 'react-native';
 export default Greet = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.parentText}>Stylesheet API</Text>
+      <View style={[styles.lightblueBox, styles.box]}>
+        <Text>Light-blue box</Text>
+      </View>
+      <View style={[styles.lightgreenBox, styles.box]}>
+        <Text>Light-green box</Text>
+      </View>
     </View>
   );
 };
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightblue',
+    backgroundColor: 'plum',
     flex: 1,
     padding: '20%',
   },
-  parentText: {
-    fontSize: 29,
+  box: {
+    width: 200,
+    height: 200,
+    padding: 15,
+  },
+
+  lightblueBox: {
+    backgroundColor: 'lightblue',
+  },
+  lightgreenBox: {
+    backgroundColor: 'lightgreen',
   },
 });
