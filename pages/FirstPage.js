@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import {View, StatusBar} from 'react-native';
+import {View, ActivityIndicator} from 'react-native';
 
 const FirstPage = () => {
   return (
     <View style={{backgroundColor: 'plum', flex: 1, padding: 20}}>
-      <StatusBar backgroundColor="lightgreen" barStyle="light-content" />
+      <ActivityIndicator />
+      <ActivityIndicator size={'large'} />
+      <ActivityIndicator size={80} color="blue" />
+      <ActivityIndicator size={80} color="blue" animating={false} />
     </View>
   );
 };
