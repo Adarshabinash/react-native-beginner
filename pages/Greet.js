@@ -4,6 +4,11 @@ import {View, Button, Text, StyleSheet} from 'react-native';
 export default Greet = () => {
   return (
     <View style={styles.container}>
+      <View style={styles.darkmode}>
+        <Text style={styles.darkmodeText}>
+          Styles Inheritance <Text style={styles.boldText}>This is bold</Text>{' '}
+        </Text>
+      </View>
       <View style={[styles.lightblueBox, styles.box, styles.boxShadow]}>
         <Text>Light-blue box</Text>
       </View>
@@ -51,5 +56,15 @@ export const styles = StyleSheet.create({
   androidShadow: {
     elevation: 10,
     shadowColor: 'red',
+  },
+  darkmode: {
+    backgroundColor: 'black',
+    padding: 20,
+  },
+  darkmodeText: {
+    color: 'white',
+  },
+  boldText: {
+    fontWeight: 'bold',
   },
 });
