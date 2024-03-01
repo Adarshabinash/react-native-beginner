@@ -4,7 +4,7 @@ import Greet from './pages/Greet';
 export default App = () => {
   return (
     <>
-      <Greet name={'Adarsh'} />
+      <Greet />
     </>
   );
 };

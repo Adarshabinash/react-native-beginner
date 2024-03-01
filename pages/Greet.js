@@ -21,9 +21,13 @@ export const styles = StyleSheet.create({
     padding: '20%',
   },
   box: {
-    width: 200,
-    height: 200,
-    padding: 15,
+    width: '50%',
+    height: '30%',
+    paddingHorizontal: '10%',
+    marginVertical: '3%',
+    borderWidth: 3,
+    borderColor: 'black',
+    borderRadius: 5,
   },
 
   lightblueBox: {
