@@ -1,11 +1,21 @@
 import React from 'react';
-// import Greet from './pages/Stylings/Greet';
-import {View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-export default App = () => {
+import Layout from './pages/Layouts/Layout';
+
+const App = () => {
   return (
-    <View>
-
+    <View style={styles.container}>
+      <Layout />
     </View>
   );
 };
+
+export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#E6E6FA',
+    flex: 1,
+  },
+});
