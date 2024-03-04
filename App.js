@@ -3,14 +3,14 @@ import {View, StyleSheet} from 'react-native';
 
 import Layout from './pages/Layouts/Layout';
 import FlexBasicProps from './pages/Layouts/FlexBasicProps';
-import DimensionUI from './pages/DynamicUI/DimensionsBasics';
+// import DimensionUI from './pages/DynamicUI/DimensionsBasics';
 
 const App = () => {
   return (
     <View style={styles.container}>
       {/* <Layout /> */}
       {/* <FlexBasicProps /> */}
-      <DimensionUI />
+      {/* <DimensionUI /> */}
     </View>
   );
 };
