@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import Box from '../../components/box';
+import Box from '../../components/Box';
 
 const FlexBasicProps = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Box from '../../components/box';
+import Box from '../../components/Box';
 
 export default function Layout() {
   return (
