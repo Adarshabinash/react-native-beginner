@@ -2,11 +2,13 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
 import Layout from './pages/Layouts/Layout';
+import FlexBasicProps from './pages/Layouts/FlexBasicProps';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Layout />
+      {/* <Layout /> */}
+      <FlexBasicProps />
     </View>
   );
 };
