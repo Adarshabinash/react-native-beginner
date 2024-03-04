@@ -1,4 +1,5 @@
 {
   "name": "secondProject",
-  "displayName": "secondProject"
+  "displayName": "secondProject",
+  "orientation": "default"
 }
