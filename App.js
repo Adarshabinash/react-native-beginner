@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 
 import Layout from './pages/Layouts/Layout';
 import FlexBasicProps from './pages/Layouts/FlexBasicProps';
-import DimensionUI from './pages/DynamicUI/Dimensions';
+import DimensionUI from './pages/DynamicUI/DimensionsBasics';
 
 const App = () => {
   return (
