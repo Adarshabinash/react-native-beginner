@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-
-import Layout from './pages/Layouts/Layout';
-import FlexBasicProps from './pages/Layouts/FlexBasicProps';
+import {View, StyleSheet, Platform} from 'react-native';
+// import Layout from './pages/Layouts/Layout';
+// import FlexBasicProps from './pages/Layouts/FlexBasicProps';
 // import DimensionUI from './pages/DynamicUI/DimensionsBasics';
+
+//~-----------For Pokemon cards-----------------
+import PokemonCard from './components/Pokemons/PokemonCard';
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
       {/* <Layout /> */}
       {/* <FlexBasicProps /> */}
       {/* <DimensionUI /> */}
+      <PokemonCard />
     </View>
   );
 };
@@ -21,5 +24,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#E6E6FA',
     flex: 1,
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
 });
