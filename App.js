@@ -60,7 +60,7 @@ const App = () => {
     {
       name: 'Pidgeot',
       image: require('./assets/Pokemons/Pidgeot.png'),
-      type: 'Fly 🦅',
+      type: 'Flying 🦅',
       hp: 46,
       moves: ['Fly', 'Gust Wind', 'Wing', 'Scratch'],
       weakness: ['Fire', 'Electric'],

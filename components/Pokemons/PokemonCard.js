@@ -8,7 +8,7 @@ export default function PokemonCard({pokemons}) {
         <View style={styles.card}>
           <View style={styles.nameContainer}>
             <Text style={{fontSize: 28, color: 'black'}}>{item.name}</Text>
-            <Text style={styles.hp}>🔥{item.hp}</Text>
+            <Text style={styles.hp}>❤️ {item.hp}</Text>
           </View>
           <View>
             <Image
@@ -17,15 +17,29 @@ export default function PokemonCard({pokemons}) {
               style={styles.image}
               resizeMode="contain"
             />
-            <Text style={{color: 'black', fontWeight: 'bold'}}>
-              TYPE:{' '}
-              <Text style={{fontSize: 20, color: 'black'}}>{item.type}</Text>
-            </Text>
-            <Text style={{fontWeight: 'bold', color: 'black'}}>
+            <View
+              style={{
+                borderWidth: 2,
+                borderColor: 'red',
+                borderRadius: 8,
+                padding: 6,
+                width: '34%',
+                alignSelf: 'center',
+              }}>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: 'black',
+                  textAlign: 'center',
+                }}>
+                {item.type}
+              </Text>
+            </View>
+            <Text style={{fontWeight: 'bold', color: 'black', marginTop: 9}}>
               <Text>MOVES:{'  '}</Text>
               {item?.moves?.map(i => i + ',')}
             </Text>
-            <Text style={{fontWeight: 'bold', color: 'black'}}>
+            <Text style={{fontWeight: 'bold', color: 'black', marginTop: 9}}>
               <Text>WEAKNESS: {'  '}</Text>{' '}
               <Text>{item?.weakness?.map(i => i + ',')}</Text>
             </Text>
