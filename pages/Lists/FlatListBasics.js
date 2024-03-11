@@ -16,6 +16,7 @@ const FlatListBasics = () => {
         // horizontal  //^For making the components horizontal
         keyExtractor={(item, index) => index}
         // ItemSeparatorComponent={<View style={{height: 16}} />}
+        ListEmptyComponent={<Text>No data available</Text>} //^---If our data component is empty, then this will render whatever JSX given
       />
     </SafeAreaView>
   );
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 8,
     borderWidth: 1,
-    // marginBottom: 14,
+    marginBottom: 14,
     width: '70%',
     borderBottomWidth: 2,
   },
