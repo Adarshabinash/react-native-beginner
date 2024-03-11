@@ -9,14 +9,47 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from 'react-native';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+
+  const validateForm = () => {
+    if (!username || username.trim() === '') {
+      setUsernameError('The username is a required field !');
+      return false;
+    } else if (!password || password.trim() === '') {
+      setPasswordError('The password is a required field!');
+      return false;
+    } else if (!username && !password) {
+      setUsernameError('The username is a required field !');
+      setPasswordError('The password is a required field!');
+      return false;
+    } else {
+      setPasswordError('');
+      setUsernameError('');
+      return true;
+    }
+  };
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      Alert.alert('Success', 'Submitted successfully!');
+      setUsername('');
+      setPassword('');
+      setPasswordError('');
+      setUsernameError('');
+    }
+  };
 
   console.log('username----------->', username);
   console.log('password------------>', password);
+  console.log('username error------------->', usernameError);
+  console.log('password error------------->', passwordError);
 
   return (
     <KeyboardAvoidingView
@@ -35,6 +68,9 @@ const LoginForm = () => {
           value={username}
           onChangeText={setUsername}
         />
+        {usernameError ? (
+          <Text style={styles.errorText}>{usernameError}</Text>
+        ) : null}
         <Text style={styles.label}>Password</Text>
         <TextInput
           placeholder="Type your password here.."
@@ -43,7 +79,10 @@ const LoginForm = () => {
           value={password}
           onChangeText={setPassword}
         />
-        <TouchableOpacity>
+        {passwordError ? (
+          <Text style={styles.errorText}>{passwordError}</Text>
+        ) : null}
+        <TouchableOpacity onPress={handleSubmit}>
           <View style={styles.buttons}>
             <Text
               style={{fontSize: 17, textAlign: 'center', fontWeight: 'bold'}}>
@@ -99,6 +138,11 @@ const styles = StyleSheet.create({
     height: 300,
     alignSelf: 'center',
     marginBottom: 40,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 15,
+    marginBottom: 15,
   },
 });
 
