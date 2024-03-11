@@ -8,11 +8,13 @@ import {
   TextInput,
 } from 'react-native';
 import TextInputForm from './pages/Formss/TextInputForm';
+import LoginForm from './pages/Formss/LoginForm';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <TextInputForm />
+      {/* <TextInputForm /> */}
+      <LoginForm />
     </SafeAreaView>
   );
 };
