@@ -6,6 +6,9 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
+  Image,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 
 const LoginForm = () => {
@@ -16,8 +19,15 @@ const LoginForm = () => {
   console.log('password------------>', password);
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior="padding"
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}>
       <View style={styles.form}>
+        <Image
+          source={require('../../assets/Pokemons/PokeBall.png')}
+          style={styles.images}
+        />
         <Text style={styles.label}>Username</Text>
         <TextInput
           placeholder="Type your usrname here.."
@@ -42,7 +52,7 @@ const LoginForm = () => {
           </View>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -84,4 +94,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     top: 20,
   },
+  images: {
+    width: 300,
+    height: 300,
+    alignSelf: 'center',
+    marginBottom: 40,
+  },
 });
+
+//^ KeyboardAvoidingView component is useful when your keyborad is covering an input field of your application.
+//^ In KeyboardAvoidingView, we have a prop which is called behaviour. This behaviour will take in padding to add a padding below the component that will give us a space between keyboard and the form
