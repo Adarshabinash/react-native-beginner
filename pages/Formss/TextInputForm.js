@@ -23,6 +23,12 @@ const TextInputForm = () => {
         autoCorrect={true} //?To enable autocorrect. We can keep it false to disable.
         autoCapitalize="none" //?In case we don't wanna auto capitalize our texts. Default will enable it.
       />
+
+      <TextInput
+        style={styles.multilineText}
+        placeholder="Write here"
+        multiline //^--------Multiline here allows us to have bigger sentences into row of sentences
+      />
       {name ? <Text style={styles.text}>My name is {name}</Text> : null}
     </SafeAreaView>
   );
@@ -45,5 +51,12 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     marginLeft: 12,
+  },
+  multilineText: {
+    minHeight: 100,
+    borderWidth: 1,
+    width: '90%',
+    left: 10,
+    textAlignVertical: 'top',
   },
 });
