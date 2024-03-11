@@ -1,11 +1,19 @@
 import React from 'react';
-import {View, FlatList, Text, SafeAreaView, StyleSheet} from 'react-native';
+import {
+  View,
+  FlatList,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  SectionList,
+} from 'react-native';
 import Pokemons from '../../data.json';
+import groupdedPokemonList from '../../grouped-data.json';
 
 const FlatListBasics = () => {
   return (
     <SafeAreaView>
-      <FlatList
+      {/* <FlatList
         data={Pokemons}
         renderItem={({item}) => (
           <View style={styles.card} key={item.id}>
@@ -21,6 +29,18 @@ const FlatListBasics = () => {
           <Text style={styles.headerText}>Pokemon List</Text> //^----For the header of the list
         }
         ListFooterComponent={<Text>End of List</Text>} //^-----For the footer of the list
+      /> */}
+
+      <SectionList
+        sections={groupdedPokemonList}
+        renderItem={({item}) => (
+          <View style={styles.card}>
+            <Text style={styles.cardText}>{item}</Text>
+          </View>
+        )}
+        renderSectionHeader={({section}) => (
+          <Text style={styles.cardText}>{section.type}</Text>
+        )}
       />
     </SafeAreaView>
   );
