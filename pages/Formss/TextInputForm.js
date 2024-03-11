@@ -5,12 +5,16 @@ import {
   TextInput,
   Text,
   StyleSheet,
+  Switch,
+  View,
 } from 'react-native';
 
 import {useState} from 'react';
 
 const TextInputForm = () => {
   const [name, setName] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
     <SafeAreaView style={styles.safeContainer}>
       <TextInput
@@ -30,6 +34,16 @@ const TextInputForm = () => {
         multiline //^--------Multiline here allows us to have bigger sentences into row of sentences
       />
       {name ? <Text style={styles.text}>My name is {name}</Text> : null}
+
+      <View style={styles.switchContainer}>
+        <Text style={styles.text}>Dark Mode</Text>
+        <Switch
+          value={isDarkMode}
+          onValueChange={() => setIsDarkMode(previousState => !previousState)}
+          trackColor={{false: 'red', true: 'yellow'}}
+          thumbColor="lightblue"
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -58,5 +72,11 @@ const styles = StyleSheet.create({
     width: '90%',
     left: 10,
     textAlignVertical: 'top',
+  },
+  switchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
   },
 });
