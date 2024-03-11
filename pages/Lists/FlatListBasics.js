@@ -17,6 +17,10 @@ const FlatListBasics = () => {
         keyExtractor={(item, index) => index}
         // ItemSeparatorComponent={<View style={{height: 16}} />}
         ListEmptyComponent={<Text>No data available</Text>} //^---If our data component is empty, then this will render whatever JSX given
+        ListHeaderComponent={
+          <Text style={styles.headerText}>Pokemon List</Text> //^----For the header of the list
+        }
+        ListFooterComponent={<Text>End of List</Text>} //^-----For the footer of the list
       />
     </SafeAreaView>
   );
@@ -37,9 +41,16 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     width: '70%',
     borderBottomWidth: 2,
+    width: '90%',
+    left: 15,
   },
   cardText: {
     fontSize: 24,
+  },
+  headerText: {
+    fontSize: 23,
+    textAlign: 'center',
+    marginBottom: 12,
   },
 });
 
