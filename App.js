@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, StyleSheet, Platform} from 'react-native';
-import ListsBasics from './pages/Lists/ListsBasics';
+import FlatListBasics from './pages/Lists/FlatListBasics';
+// import ListsBasics from './pages/Lists/ListsBasics';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <ListsBasics />
+      {/* <ListsBasics /> */}
+      <FlatListBasics />
     </View>
   );
 };
