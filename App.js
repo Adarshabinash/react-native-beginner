@@ -1,14 +1,19 @@
 import React from 'react';
-import {View, StyleSheet, Platform} from 'react-native';
-import FlatListBasics from './pages/Lists/FlatListBasics';
-// import ListsBasics from './pages/Lists/ListsBasics';
+import {
+  View,
+  StyleSheet,
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  TextInput,
+} from 'react-native';
+import TextInputForm from './pages/Formss/TextInputForm';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <ListsBasics /> */}
-      <FlatListBasics />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <TextInputForm />
+    </SafeAreaView>
   );
 };
 
@@ -18,6 +23,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#E6E6FA',
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
+    paddingTop: StatusBar.currentHeight,
   },
 });
