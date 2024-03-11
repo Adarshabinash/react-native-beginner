@@ -13,6 +13,9 @@ const FlatListBasics = () => {
             <Text style={styles.cardText}>{item.type}</Text>
           </View>
         )}
+        // horizontal  //^For making the components horizontal
+        keyExtractor={(item, index) => index}
+        // ItemSeparatorComponent={<View style={{height: 16}} />}
       />
     </SafeAreaView>
   );
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 8,
     borderWidth: 1,
-    marginBottom: 14,
+    // marginBottom: 14,
     width: '70%',
     borderBottomWidth: 2,
   },
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
 {
   /*
 
-^FlatList has 2 mandatory props- data(to pass the array of items that we map normally to get data)
+^FlatList is self closing and has 2 mandatory props- data(to pass the array of items that we map normally to get data)
 ^renderItem - This is a function that returns the JSX for rendering each list items. Similar to what we are doing in the JSX after mapping the data...Those shits inside the div or View whatever.
 
 */
