@@ -25,7 +25,7 @@ const LoginForm = () => {
     } else if (!password || password.trim() === '') {
       setPasswordError('The password is a required field!');
       return false;
-    } else if (!username && !password) {
+    } else if (!username && !password) { 
       setUsernameError('The username is a required field !');
       setPasswordError('The password is a required field!');
       return false;
