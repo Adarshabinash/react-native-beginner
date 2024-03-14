@@ -9,12 +9,14 @@ import {
 } from 'react-native';
 import TextInputForm from './pages/Formss/TextInputForm';
 import LoginForm from './pages/Formss/LoginForm';
+import Network1 from './pages/Networkings/Network1';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* <TextInputForm /> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <Network1 />
     </SafeAreaView>
   );
 };
